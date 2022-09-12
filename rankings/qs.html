@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>大学排名top500数据分析</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/assets/img/favicon.png" rel="icon">
+  <link href="../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+
+    <div class="container">
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="../index.html">首页 <i class="la la-angle-down"></i></a></li>
+          <li class="drop-down"><a href="#">世界大学综合排名总览</a>
+            <ul>
+              <li><a href="#">QS</a>
+              </li>
+              <li><a href="../rankings/arwu.html">ARWU</a>
+              </li>
+              <li><a href="#">THE</a>
+              </li>
+              <li><a href="#">USNEWS</a>
+              </li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="">世界大学综合排名分布图</a>
+            <ul>
+              <li><a href="/world_overall-ranking_map">世界分布图</a></li>
+              <li><a href="#">七大洲分布图</a></li>
+                <li><a href="/china_overall-ranking_map">中国分布图</a></li>
+              <li><a href="/cba_single_axis_scatter">中英美大学排名单轴散点图</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>QS世界500强大学综合排名</h2>
+        </div>
+
+        <!-- ======= Counts Section ======= -->
+
+    <section class="counts section-bg">
+      <div class="container">
+        <div class="a">
+        <input type="text" placeholder="院校搜索" id="myInput" onkeyup="myFunction()" class="b">
+        <a href="#" class="c">
+            <img src="../搜索框.png" type="button" style="width: 30px;">
+        </a>
+    </div>
+          <table class="table table-striped" id="myTable"> <!--线条-->
+              <tr><th>排名</th><th>大学</th><th>分数</th><th>国家/地区</th></tr>
+<tr><td>1</td><td>麻省理工学院</td><td>100</td><td> United States</td></tr>
+<tr><td>2</td><td>剑桥大学</td><td>98.8</td><td> United Kingdom</td></tr>
+<tr><td>3</td><td>斯坦福大学</td><td>98.5</td><td> United States</td></tr>
+<tr><td>4</td><td>牛津大学</td><td>98.4</td><td> United Kingdom</td></tr>
+<tr><td>5</td><td>哈佛大学</td><td>97.6</td><td> United States</td></tr>
+<tr><td>6</td><td>加州理工大学（Caltech)</td><td>97</td><td> United States</td></tr>
+<tr><td>6</td><td>帝国理工学院</td><td>97</td><td> United Kingdom</td></tr>
+<tr><td>8</td><td>伦敦大学学院</td><td>95</td><td> United Kingdom</td></tr>
+<tr><td>9</td><td>苏黎世联邦理工大学（瑞士联邦理工学院）</td><td>93.6</td><td> Switzerland</td></tr>
+<tr><td>10</td><td>芝加哥大学</td><td>93.2</td><td> United States</td></tr>
+<tr><td>11</td><td>新加坡国立大学</td><td>92.7</td><td> Singapore</td></tr>
+<tr><td>12</td><td>北京大学</td><td>91.3</td><td> China (Mainland)</td></tr>
+<tr><td>13</td><td>宾夕法尼亚大学</td><td>90.6</td><td> United States</td></tr>
+<tr><td>14</td><td>清华大学</td><td>90.1</td><td> China (Mainland)</td></tr>
+<tr><td>15</td><td>爱丁堡大学</td><td>89.5</td><td> United Kingdom</td></tr>
+<tr><td>16</td><td>洛桑联邦理工学院（EPFL)</td><td>89.2</td><td> Switzerland</td></tr>
+<tr><td>16</td><td>普林斯顿大学</td><td>89.2</td><td> United States</td></tr>
+<tr><td>18</td><td>耶鲁大学</td><td>89</td><td> United States</td></tr>
+<tr><td>19</td><td>南洋理工大学</td><td>88.4</td><td> Singapore</td></tr>
+<tr><td>20</td><td>康奈尔大学</td><td>87.2</td><td> United States</td></tr>
+<tr><td>21</td><td>香港大学（HKU）</td><td>87</td><td> Hong Kong SAR</td></tr>
+<tr><td>22</td><td>哥伦比亚大学</td><td>86.7</td><td> United States</td></tr>
+<tr><td>23</td><td>东京大学</td><td>85.3</td><td> Japan</td></tr>
+<tr><td>24</td><td>约翰霍普金斯大学</td><td>85.1</td><td> United States</td></tr>
+<tr><td>25</td><td>密歇根大学</td><td>84.4</td><td> United States</td></tr>
+<tr><td>26</td><td> 巴黎科学艺术人文大学</td><td>83.8</td><td> France</td></tr>
+<tr><td>27</td><td>加州大学伯克利分校</td><td>82.7</td><td> United States</td></tr>
+<tr><td>28</td><td>曼彻斯特大学</td><td>82.3</td><td> United Kingdom</td></tr>
+<tr><td>29</td><td>首尔国立大学</td><td>82.2</td><td> South Korea</td></tr>
+<tr><td>30</td><td>澳大利亚国立大学（ANU)</td><td>82.1</td><td> Australia</td></tr>
+<tr><td>31</td><td>麦吉尔大学</td><td>81.9</td><td> Canada</td></tr>
+<tr><td>32</td><td>西北大学</td><td>81.8</td><td> United States</td></tr>
+<tr><td>33</td><td>墨尔本大学</td><td>81.6</td><td> Australia</td></tr>
+<tr><td>34</td><td>复旦大学</td><td>81.5</td><td> China (Mainland)</td></tr>
+<tr><td>34</td><td>多伦多大学</td><td>81.5</td><td> Canada</td></tr>
+<tr><td>36</td><td>京都大学</td><td>81.4</td><td> Japan</td></tr>
+<tr><td>37</td><td>伦敦国王学院</td><td>81.2</td><td> United Kingdom</td></tr>
+<tr><td>38</td><td>香港中文大学</td><td>80.6</td><td> Hong Kong SAR</td></tr>
+<tr><td>39</td><td>纽约大学（NYU）</td><td>80.3</td><td> United States</td></tr>
+<tr><td>40</td><td>香港科技大学（HKUST)</td><td>79.8</td><td> Hong Kong SAR</td></tr>
+<tr><td>41</td><td>悉尼大学</td><td>79.6</td><td> Australia</td></tr>
+<tr><td>42</td><td>韩国科学技术研究所</td><td>79.3</td><td> South Korea</td></tr>
+<tr><td>42</td><td>浙江大学</td><td>79.3</td><td> China (Mainland)</td></tr>
+<tr><td>44</td><td>加州大学洛杉矶分校</td><td>78.7</td><td> United States</td></tr>
+<tr><td>45</td><td>新南威尔士大学（UNSW）</td><td>78</td><td> Australia</td></tr>
+<tr><td>46</td><td>上海交通大学</td><td>77.4</td><td> China (Mainland)</td></tr>
+<tr><td>47</td><td>不列颠哥伦比亚大学</td><td>77</td><td> Canada</td></tr>
+<tr><td>48</td><td>巴黎理工学院</td><td>76.8</td><td> France</td></tr>
+<tr><td>49</td><td>慕尼黑工业大学</td><td>76.4</td><td> Germany</td></tr>
+<tr><td>50</td><td>杜克大学</td><td>74.8</td><td> United States</td></tr>
+<tr><td>50</td><td>昆士兰大学（UQ）</td><td>74.8</td><td> Australia</td></tr>
+<tr><td>52</td><td>卡内基梅隆大学</td><td>74.6</td><td> United States</td></tr>
+<tr><td>53</td><td>加州大学圣地亚哥分校</td><td>74.5</td><td> United States</td></tr>
+<tr><td>54</td><td>香港城市大学</td><td>73.6</td><td> Hong Kong SAR</td></tr>
+<tr><td>55</td><td>东京工业大学</td><td>72.5</td><td> Japan</td></tr>
+<tr><td>56</td><td>伦敦经济政治学院</td><td>72.3</td><td> United Kingdom</td></tr>
+<tr><td>57</td><td>蒙纳士大学</td><td>71.6</td><td> Australia</td></tr>
+<tr><td>58</td><td>阿姆斯特丹大学</td><td>71.1</td><td> Netherlands</td></tr>
+<tr><td>59</td><td>路德维希 - 马克西米利安 - 慕尼黑大学</td><td>70.4</td><td> Germany</td></tr>
+<tr><td>60</td><td>索邦大学</td><td>70.1</td><td> France</td></tr>
+<tr><td>61</td><td>代尔夫特理工大学</td><td>70</td><td> Netherlands</td></tr>
+<tr><td>61</td><td>布里斯托大学</td><td>70</td><td> United Kingdom</td></tr>
+<tr><td>63</td><td>布朗大学</td><td>69.6</td><td> United States</td></tr>
+<tr><td>64</td><td>华威大学</td><td>69.1</td><td> United Kingdom</td></tr>
+<tr><td>65</td><td>鲁普莱希特-卡尔斯-海德堡大学</td><td>69</td><td> Germany</td></tr>
+<tr><td>65</td><td>香港理工大学</td><td>69</td><td> Hong Kong SAR</td></tr>
+<tr><td>67</td><td>布宜诺斯艾利斯大学</td><td>68.9</td><td> Argentina</td></tr>
+<tr><td>68</td><td>大阪大学</td><td>68.2</td><td> Japan</td></tr>
+<tr><td>69</td><td>巴黎萨克雷大学</td><td>68.1</td><td> France</td></tr>
+<tr><td>70</td><td>马来亚大学（UM）</td><td>67.9</td><td> Malaysia</td></tr>
+<tr><td>71</td><td>浦项科技大学</td><td>67.7</td><td> South Korea</td></tr>
+<tr><td>72</td><td>德克萨斯大学奥斯汀分校</td><td>67.4</td><td> United States</td></tr>
+<tr><td>73</td><td>延世大学</td><td>67</td><td> South Korea</td></tr>
+<tr><td>74</td><td>高丽大学</td><td>66.9</td><td> South Korea</td></tr>
+<tr><td>75</td><td>罗蒙诺索夫莫斯科国立大学</td><td>66.8</td><td> Russia</td></tr>
+<tr><td>76</td><td>鲁汶大学</td><td>66</td><td> Belgium</td></tr>
+<tr><td>77</td><td>台湾大学</td><td>65.7</td><td> Taiwan</td></tr>
+<tr><td>78</td><td>南安普敦大学</td><td>65</td><td> United Kingdom</td></tr>
+<tr><td>79</td><td>东北大学</td><td>64.9</td><td> Japan</td></tr>
+<tr><td>80</td><td>华盛顿大学</td><td>64.7</td><td> United States</td></tr>
+<tr><td>81</td><td>格拉斯哥大学</td><td>64.6</td><td> United Kingdom</td></tr>
+<tr><td>82</td><td>哥本哈根大学</td><td>64.1</td><td> Denmark</td></tr>
+<tr><td>83</td><td>威斯康星大学麦迪逊分校</td><td>63.7</td><td> United States</td></tr>
+<tr><td>83</td><td>苏黎世大学</td><td>63.7</td><td> Switzerland</td></tr>
+<tr><td>85</td><td>伊利诺伊大学香槟分校</td><td>63.6</td><td> United States</td></tr>
+<tr><td>86</td><td>利兹大学</td><td>62.8</td><td> United Kingdom</td></tr>
+<tr><td>87</td><td>奥克兰大学</td><td>62.7</td><td> New Zealand</td></tr>
+<tr><td>88</td><td>乔治亚理工学院(Georgia Tech)</td><td>62.3</td><td> United States</td></tr>
+<tr><td>89</td><td>皇家理工学院</td><td>62.1</td><td> Sweden</td></tr>
+<tr><td>90</td><td>西澳大学（UWA）</td><td>61.7</td><td> Australia</td></tr>
+<tr><td>91</td><td>伯明翰大学</td><td>61.1</td><td> United Kingdom</td></tr>
+<tr><td>92</td><td>杜伦大学</td><td>60.9</td><td> United Kingdom</td></tr>
+<tr><td>93</td><td>宾夕法尼亚州立大学</td><td>60.8</td><td> United States</td></tr>
+<tr><td>94</td><td>中国科学技术大学</td><td>60.7</td><td> China (Mainland)</td></tr>
+<tr><td>95</td><td>隆德大学</td><td>60.1</td><td> Sweden</td></tr>
+<tr><td>96</td><td>谢菲尔德大学</td><td>59.5</td><td> United Kingdom</td></tr>
+<tr><td>96</td><td>圣安德鲁斯大学</td><td>59.5</td><td> United Kingdom</td></tr>
+<tr><td>98</td><td>都柏林三一学院</td><td>59.1</td><td> Ireland</td></tr>
+<tr><td>99</td><td>成均馆大学</td><td>58.9</td><td> South Korea</td></tr>
+<tr><td>100</td><td>赖斯大学</td><td>58.8</td><td> United States</td></tr>
+<tr><td>101</td><td>奥斯陆大学</td><td>58.7</td><td> Norway</td></tr>
+<tr><td>102</td><td>加州大学戴维斯分校</td><td>58.2</td><td> United States</td></tr>
+<tr><td>102</td><td>北卡罗来纳大学教堂山</td><td>58.2</td><td> United States</td></tr>
+<tr><td>104</td><td>丹麦技术大学</td><td>58</td><td> Denmark</td></tr>
+<tr><td>104</td><td>墨西哥国立自治大学</td><td>58</td><td> Mexico</td></tr>
+<tr><td>106</td><td>阿卜杜勒·阿齐兹国王大学（KAU）</td><td>57.8</td><td> Saudi Arabia</td></tr>
+<tr><td>106</td><td>赫尔辛基大学</td><td>57.8</td><td> Finland</td></tr>
+<tr><td>108</td><td>波士顿大学</td><td>57.2</td><td> United States</td></tr>
+<tr><td>109</td><td>阿德莱德大学</td><td>57</td><td> Australia</td></tr>
+<tr><td>110</td><td>阿尔伯塔大学</td><td>56.9</td><td> Canada</td></tr>
+<tr><td>111</td><td>里昂高等师范学院</td><td>56.6</td><td> France</td></tr>
+<tr><td>112</td><td>名古屋大学</td><td>56.3</td><td> Japan</td></tr>
+<tr><td>112</td><td>乌得勒支大学</td><td>56.3</td><td> Netherlands</td></tr>
+<tr><td>114</td><td>诺丁汉大学</td><td>56.2</td><td> United Kingdom</td></tr>
+<tr><td>115</td><td>圣保罗大学</td><td>56.1</td><td> Brazil</td></tr>
+<tr><td>116</td><td>阿尔托大学</td><td>55.9</td><td> Finland</td></tr>
+<tr><td>116</td><td>蒙特利尔大学</td><td>55.9</td><td> Canada</td></tr>
+<tr><td>118</td><td>柏林自由大学</td><td>55.8</td><td> Germany</td></tr>
+<tr><td>118</td><td>华盛顿大学在圣路易斯</td><td>55.8</td><td> United States</td></tr>
+<tr><td>120</td><td>伯尔尼大学</td><td>55.7</td><td> Switzerland</td></tr>
+<tr><td>121</td><td>智利天主教大学</td><td>54.9</td><td> Chile</td></tr>
+<tr><td>122</td><td>纽卡斯尔大学</td><td>54.8</td><td> United Kingdom</td></tr>
+<tr><td>123</td><td>马来西亚博特拉大学（UPM）</td><td>54.7</td><td> Malaysia</td></tr>
+<tr><td>124</td><td>瓦赫宁根大学</td><td>54.6</td><td> Netherlands</td></tr>
+<tr><td>125</td><td>查尔姆斯理工大学</td><td>54.5</td><td> Sweden</td></tr>
+<tr><td>125</td><td>伦敦大学皇后玛丽学院（QMUL）</td><td>54.5</td><td> United Kingdom</td></tr>
+<tr><td>125</td><td>日内瓦大学</td><td>54.5</td><td> Switzerland</td></tr>
+<tr><td>128</td><td>乌普萨拉大学</td><td>54.3</td><td> Sweden</td></tr>
+<tr><td>129</td><td>普渡大学</td><td>54.2</td><td> United States</td></tr>
+<tr><td>129</td><td>马来西亚国民大学（UKM）</td><td>54.2</td><td> Malaysia</td></tr>
+<tr><td>131</td><td>柏林洪堡大学</td><td>54.1</td><td> Germany</td></tr>
+<tr><td>131</td><td>莱顿大学</td><td>54.1</td><td> Netherlands</td></tr>
+<tr><td>133</td><td>南京大学</td><td>53.9</td><td> China (Mainland)</td></tr>
+<tr><td>134</td><td>南加州大学</td><td>53.7</td><td> United States</td></tr>
+<tr><td>135</td><td>九州大学</td><td>53.5</td><td> Japan</td></tr>
+<tr><td>136</td><td>巴塞尔大学</td><td>53.3</td><td> Switzerland</td></tr>
+<tr><td>137</td><td>悉尼科技大学（UTS）</td><td>53.2</td><td> Australia</td></tr>
+<tr><td>138</td><td>埃因霍芬理工大学</td><td>52.7</td><td> Netherlands</td></tr>
+<tr><td>139</td><td>米兰理工大学</td><td>52.4</td><td> Italy</td></tr>
+<tr><td>140</td><td>俄亥俄州立大学</td><td>52</td><td> United States</td></tr>
+<tr><td>141</td><td>北海道大学</td><td>51.9</td><td> Japan</td></tr>
+<tr><td>141</td><td>卡尔斯鲁厄理工学院</td><td>51.9</td><td> Germany</td></tr>
+<tr><td>143</td><td>根特大学</td><td>51.6</td><td> Belgium</td></tr>
+<tr><td>143</td><td>马来西亚理科大学（USM）</td><td>51.6</td><td> Malaysia</td></tr>
+<tr><td>145</td><td>格罗宁根大学</td><td>51.4</td><td> Netherlands</td></tr>
+<tr><td>146</td><td>兰卡斯特大学</td><td>51.2</td><td> United Kingdom</td></tr>
+<tr><td>147</td><td>亚琛工业大学</td><td>51.1</td><td> Germany</td></tr>
+<tr><td>147</td><td>罗切斯特大学</td><td>51.1</td><td> United States</td></tr>
+<tr><td>149</td><td>加州大学圣芭芭拉分校</td><td>50.9</td><td> United States</td></tr>
+<tr><td>150</td><td>哈拉克国立大学</td><td>50.8</td><td> Kazakhstan</td></tr>
+<tr><td>151</td><td>维也纳大学</td><td>50.6</td><td> Austria</td></tr>
+<tr><td>152</td><td>麦克马斯特大学</td><td>50.4</td><td> Canada</td></tr>
+<tr><td>153</td><td>斯德哥尔摩大学</td><td>50.1</td><td> Sweden</td></tr>
+<tr><td>154</td><td>滑铁卢大学</td><td>50</td><td> Canada</td></tr>
+<tr><td>155</td><td>埃默里大学</td><td>49.5</td><td> United States</td></tr>
+<tr><td>155</td><td>印度科学研究所班加罗尔</td><td>49.5</td><td> India</td></tr>
+<tr><td>157</td><td>汉阳大学</td><td>49.4</td><td> South Korea</td></tr>
+<tr><td>158</td><td>柏林工业大学</td><td>49.3</td><td> Germany</td></tr>
+<tr><td>159</td><td>密歇根州立大学</td><td>48.9</td><td> United States</td></tr>
+<tr><td>160</td><td>法赫德法国石油和矿物大学（KFUPM）</td><td>48.8</td><td> Saudi Arabia</td></tr>
+<tr><td>161</td><td>奥胡斯大学</td><td>48.6</td><td> Denmark</td></tr>
+<tr><td>162</td><td>约克大学</td><td>48.4</td><td> United Kingdom</td></tr>
+<tr><td>163</td><td>埃克塞特大学</td><td>48.2</td><td> United Kingdom</td></tr>
+<tr><td>164</td><td>德州农工大学</td><td>47.9</td><td> United States</td></tr>
+<tr><td>164</td><td>马里兰大学，学院公园</td><td>47.9</td><td> United States</td></tr>
+<tr><td>166</td><td>卡迪夫大学</td><td>47.8</td><td> United Kingdom</td></tr>
+<tr><td>167</td><td>博洛尼亚大学</td><td>47.5</td><td> Italy</td></tr>
+<tr><td>167</td><td>智利大学</td><td>47.5</td><td> Chile</td></tr>
+<tr><td>169</td><td>蒂宾根大学</td><td>47.2</td><td> Germany</td></tr>
+<tr><td>170</td><td>蒙特雷科技大学</td><td>47.1</td><td> Mexico</td></tr>
+<tr><td>171</td><td>萨皮恩扎 - 罗马大学</td><td>46.8</td><td> Italy</td></tr>
+<tr><td>172</td><td>印度理工学院孟买分校</td><td>46.7</td><td> India</td></tr>
+<tr><td>172</td><td>韦仕敦大学（西安大略大学）</td><td>46.7</td><td> Canada</td></tr>
+<tr><td>174</td><td>国立路桥学校</td><td>46.5</td><td> France</td></tr>
+<tr><td>174</td><td>印度理工学院德里分校</td><td>46.5</td><td> India</td></tr>
+<tr><td>176</td><td>凯斯西储大学</td><td>46.2</td><td> United States</td></tr>
+<tr><td>177</td><td>国立清华大学</td><td>45.9</td><td> Taiwan</td></tr>
+<tr><td>178</td><td>巴塞罗那自治大学</td><td>45.8</td><td> Spain</td></tr>
+<tr><td>179</td><td>维也纳技术大学</td><td>45.7</td><td> Austria</td></tr>
+<tr><td>179</td><td>巴斯大学</td><td>45.7</td><td> United Kingdom</td></tr>
+<tr><td>181</td><td>哈利法大学</td><td>45.6</td><td> United Arab Emirates</td></tr>
+<tr><td>181</td><td>都柏林大学</td><td>45.6</td><td> Ireland</td></tr>
+<tr><td>181</td><td>匹兹堡大学</td><td>45.6</td><td> United States</td></tr>
+<tr><td>184</td><td>巴塞罗那大学</td><td>45.5</td><td> Spain</td></tr>
+<tr><td>185</td><td>哥德堡大学</td><td>45.4</td><td> Sweden</td></tr>
+<tr><td>185</td><td>明尼苏达大学</td><td>45.4</td><td> United States</td></tr>
+<tr><td>185</td><td>伍伦贡大学</td><td>45.4</td><td> Australia</td></tr>
+<tr><td>188</td><td>佛罗里达大学</td><td>45.3</td><td> United States</td></tr>
+<tr><td>189</td><td>弗莱堡大学</td><td>45.2</td><td> Germany</td></tr>
+<tr><td>190</td><td>皇家墨尔本理工大学</td><td>44.6</td><td> Australia</td></tr>
+<tr><td>190</td><td>利物浦大学</td><td>44.6</td><td> United Kingdom</td></tr>
+<tr><td>192</td><td>纽卡斯尔大学</td><td>44.5</td><td> Australia</td></tr>
+<tr><td>193</td><td>科廷大学</td><td>44.4</td><td> Australia</td></tr>
+<tr><td>194</td><td>武汉大学</td><td>44.3</td><td> China (Mainland)</td></tr>
+<tr><td>195</td><td>麦考瑞大学</td><td>44.2</td><td> Australia</td></tr>
+<tr><td>195</td><td>法语天主教鲁汶大学</td><td>44.2</td><td> Belgium</td></tr>
+<tr><td>197</td><td>庆应义塾大学</td><td>44.1</td><td> Japan</td></tr>
+<tr><td>197</td><td>蔚山国立科学技术院</td><td>44.1</td><td> South Korea</td></tr>
+<tr><td>199</td><td>范德比尔特大学</td><td>43.9</td><td> United States</td></tr>
+<tr><td>200</td><td>德累斯顿工业大学</td><td>43.6</td><td> Germany</td></tr>
+<tr><td>201</td><td>波恩大学</td><td>43.3</td><td> Germany</td></tr>
+<tr><td>202</td><td>国立阳明交通大学</td><td>43.2</td><td> Taiwan</td></tr>
+<tr><td>203</td><td>马来西亚工艺大学（UTM）</td><td>43</td><td> Malaysia</td></tr>
+<tr><td>203</td><td>洛桑大学</td><td>43</td><td> Switzerland</td></tr>
+<tr><td>205</td><td>达特茅斯学院</td><td>42.8</td><td> United States</td></tr>
+<tr><td>205</td><td>早稻田大学</td><td>42.8</td><td> Japan</td></tr>
+<tr><td>207</td><td>卑尔根大学</td><td>42.7</td><td> Norway</td></tr>
+<tr><td>208</td><td>鹿特丹伊拉斯谟大学</td><td>42.6</td><td> Netherlands</td></tr>
+<tr><td>208</td><td>卡塔尔大学</td><td>42.6</td><td> Qatar</td></tr>
+<tr><td>210</td><td>金边大学</td><td>42.5</td><td> Brazil</td></tr>
+<tr><td>210</td><td>布鲁塞尔自由大学</td><td>42.5</td><td> Belgium</td></tr>
+<tr><td>212</td><td>同济大学</td><td>42.4</td><td> China (Mainland)</td></tr>
+<tr><td>212</td><td>特温特大学</td><td>42.4</td><td> Netherlands</td></tr>
+<tr><td>214</td><td>阿姆斯特丹自由大学</td><td>42.3</td><td> Netherlands</td></tr>
+<tr><td>215</td><td>马德里自治大学</td><td>42.2</td><td> Spain</td></tr>
+<tr><td>215</td><td>乔治奥古斯特哥廷根大学</td><td>42.2</td><td> Germany</td></tr>
+<tr><td>217</td><td>哈尔滨工业大学</td><td>42</td><td> China (Mainland)</td></tr>
+<tr><td>217</td><td>奥塔哥大学</td><td>42</td><td> New Zealand</td></tr>
+<tr><td>219</td><td>亚利桑那州立大学</td><td>41.8</td><td> United States</td></tr>
+<tr><td>220</td><td>洛斯安第斯哥伦比亚大学</td><td>41.6</td><td> Colombia</td></tr>
+<tr><td>220</td><td>阿伯丁大学</td><td>41.6</td><td> United Kingdom</td></tr>
+<tr><td>222</td><td>昆士兰科技大学（QUT）</td><td>41.5</td><td> Australia</td></tr>
+<tr><td>222</td><td>希伯来大学</td><td>41.5</td><td> Israel</td></tr>
+<tr><td>224</td><td>朱拉隆功大学</td><td>41.4</td><td> Thailand</td></tr>
+<tr><td>224</td><td>国立成功大学</td><td>41.4</td><td> Taiwan</td></tr>
+<tr><td>226</td><td>马德里康普顿斯大学（UCM）</td><td>41.2</td><td> Spain</td></tr>
+<tr><td>226</td><td>南方科技大学</td><td>41.2</td><td> China (Mainland)</td></tr>
+<tr><td>228</td><td>汉堡大学</td><td>40.7</td><td> Germany</td></tr>
+<tr><td>229</td><td>雷丁大学</td><td>40.4</td><td> United Kingdom</td></tr>
+<tr><td>230</td><td>鲍曼莫斯科国立技术大学</td><td>40.3</td><td> Russia</td></tr>
+<tr><td>231</td><td>加札马达大学</td><td>40.2</td><td> Indonesia</td></tr>
+<tr><td>232</td><td>雷德布德大学奈梅亨</td><td>40</td><td> Netherlands</td></tr>
+<tr><td>233</td><td>贝尔法斯特女王大学</td><td>39.9</td><td> United Kingdom</td></tr>
+<tr><td>233</td><td>庞培法布拉大学</td><td>39.9</td><td> Spain</td></tr>
+<tr><td>235</td><td>万隆理工学院</td><td>39.5</td><td> Indonesia</td></tr>
+<tr><td>235</td><td>加州大学欧文分校</td><td>39.5</td><td> United States</td></tr>
+<tr><td>237</td><td>沙特国王大学（KSU）</td><td>39.4</td><td> Saudi Arabia</td></tr>
+<tr><td>237</td><td>开普敦大学</td><td>39.4</td><td> South Africa</td></tr>
+<tr><td>237</td><td>渥太华大学</td><td>39.4</td><td> Canada</td></tr>
+<tr><td>240</td><td>提契诺大学</td><td>39.2</td><td> Switzerland</td></tr>
+<tr><td>240</td><td>苏塞克斯大学</td><td>39.2</td><td> United Kingdom</td></tr>
+<tr><td>242</td><td>卡尔加里大学</td><td>39</td><td> Canada</td></tr>
+<tr><td>243</td><td>哥伦比亚国立大学</td><td>38.9</td><td> Colombia</td></tr>
+<tr><td>243</td><td>圣母大学</td><td>38.9</td><td> United States</td></tr>
+<tr><td>243</td><td>帕多瓦大学（UNIPD）</td><td>38.9</td><td> Italy</td></tr>
+<tr><td>246</td><td>女王大学</td><td>38.8</td><td> Canada</td></tr>
+<tr><td>246</td><td>耶什华大学</td><td>38.8</td><td> United States</td></tr>
+<tr><td>248</td><td>印度尼西亚大学</td><td>38.7</td><td> Indonesia</td></tr>
+<tr><td>248</td><td>巴黎大学</td><td>38.7</td><td> France</td></tr>
+<tr><td>250</td><td>印度理工学院马德拉斯分校</td><td>38.6</td><td> India</td></tr>
+<tr><td>251</td><td>布鲁塞尔大学</td><td>38.5</td><td> Belgium</td></tr>
+<tr><td>252</td><td>贝鲁特美国大学（AUB）</td><td>38.4</td><td> Lebanon</td></tr>
+<tr><td>253</td><td>马萨诸塞大学，阿默斯特</td><td>38.3</td><td> United States</td></tr>
+<tr><td>253</td><td>纳瓦拉大学</td><td>38.3</td><td> Spain</td></tr>
+<tr><td>253</td><td>弗吉尼亚大学</td><td>38.3</td><td> United States</td></tr>
+<tr><td>256</td><td>拉夫堡大学</td><td>38.1</td><td> United Kingdom</td></tr>
+<tr><td>256</td><td>玛希隆大学</td><td>38.1</td><td> Thailand</td></tr>
+<tr><td>256</td><td>文莱达鲁萨兰国大学</td><td>38.1</td><td> Brunei</td></tr>
+<tr><td>259</td><td>巴黎政治学院</td><td>38</td><td> France</td></tr>
+<tr><td>260</td><td>新西伯利亚州立大学</td><td>37.9</td><td> Russia</td></tr>
+<tr><td>260</td><td>特拉维夫大学</td><td>37.9</td><td> Israel</td></tr>
+<tr><td>262</td><td>北京师范大学</td><td>37.8</td><td> China (Mainland)</td></tr>
+<tr><td>262</td><td>亚利桑那大学</td><td>37.8</td><td> United States</td></tr>
+<tr><td>264</td><td>印度理工学院坎普尔分校</td><td>37.6</td><td> India</td></tr>
+<tr><td>264</td><td>托木斯克州立大学</td><td>37.6</td><td> Russia</td></tr>
+<tr><td>266</td><td>迪肯大学</td><td>37.5</td><td> Australia</td></tr>
+<tr><td>267</td><td>物理莫斯科与技术研究所州立大学</td><td>37.3</td><td> Russia</td></tr>
+<tr><td>267</td><td>罗格斯大学 - 新泽西州立大学新不伦瑞克分校</td><td>37.3</td><td> United States</td></tr>
+<tr><td>267</td><td>中山大学</td><td>37.3</td><td> China (Mainland)</td></tr>
+<tr><td>270</td><td>印度理工学院克勒格布尔分校</td><td>37.2</td><td> India</td></tr>
+<tr><td>270</td><td>庆熙大学</td><td>37.2</td><td> South Korea</td></tr>
+<tr><td>270</td><td>爱尔兰国立高威大学</td><td>37.2</td><td> Ireland</td></tr>
+<tr><td>270</td><td>圣彼得堡国立大学</td><td>37.2</td><td> Russia</td></tr>
+<tr><td>274</td><td>波尔图大学</td><td>37.1</td><td> Portugal</td></tr>
+<tr><td>275</td><td>达姆施塔特技术大学</td><td>36.9</td><td> Germany</td></tr>
+<tr><td>275</td><td>惠灵顿维多利亚大学</td><td>36.9</td><td> New Zealand</td></tr>
+<tr><td>277</td><td>国立欧亚大学 (ENU) </td><td>36.8</td><td> Kazakhstan</td></tr>
+<tr><td>278</td><td>马斯特里赫特大学</td><td>36.7</td><td> Netherlands</td></tr>
+<tr><td>279</td><td>莱斯特大学</td><td>36.6</td><td> United Kingdom</td></tr>
+<tr><td>280</td><td>安特卫普大学</td><td>36.5</td><td> Belgium</td></tr>
+<tr><td>281</td><td>乔治城大学</td><td>36.3</td><td> United States</td></tr>
+<tr><td>281</td><td>赫里瓦特大学</td><td>36.3</td><td> United Kingdom</td></tr>
+<tr><td>281</td><td>香港浸会大学</td><td>36.3</td><td> Hong Kong SAR</td></tr>
+<tr><td>284</td><td>坎特伯雷大学</td><td>36.2</td><td> New Zealand</td></tr>
+<tr><td>284</td><td>格拉茨大学</td><td>36.1</td><td> Austria</td></tr>
+<tr><td>284</td><td>泰莱大学</td><td>36.1</td><td> Malaysia</td></tr>
+<tr><td>284</td><td>UCSI大学</td><td>36.1</td><td> Malaysia</td></tr>
+<tr><td>284</td><td>华沙大学</td><td>36.1</td><td> Poland</td></tr>
+<tr><td>288</td><td>白俄罗斯州立大学</td><td>36</td><td> Belarus</td></tr>
+<tr><td>288</td><td>布拉格查理大学</td><td>36</td><td> Czech Republic</td></tr>
+<tr><td>288</td><td>光州科技学院（GIST）</td><td>36</td><td> South Korea</td></tr>
+<tr><td>291</td><td>图尔库大学</td><td>35.8</td><td> Finland</td></tr>
+<tr><td>292</td><td>梅西大学</td><td>35.7</td><td> New Zealand</td></tr>
+<tr><td>293</td><td>雅盖隆大学</td><td>35.6</td><td> Poland</td></tr>
+<tr><td>293</td><td>斯马尼亚大学</td><td>35.6</td><td> Australia</td></tr>
+<tr><td>295</td><td>俄罗斯人民友谊大学</td><td>35.5</td><td> Russia</td></tr>
+<tr><td>296</td><td>斯温本科技大学</td><td>35.4</td><td> Australia</td></tr>
+<tr><td>296</td><td>阿联酋大学</td><td>35.4</td><td> United Arab Emirates</td></tr>
+<tr><td>296</td><td>迈阿密大学</td><td>35.4</td><td> United States</td></tr>
+<tr><td>296</td><td>塔尔图大学</td><td>35.4</td><td> Estonia</td></tr>
+<tr><td>300</td><td>格里菲斯大学</td><td>35.2</td><td> Australia</td></tr>
+<tr><td>300</td><td>巴黎第一大学</td><td>35.2</td><td> France</td></tr>
+<tr><td>302</td><td>西安交通大学</td><td>35.1</td><td> China (Mainland)</td></tr>
+<tr><td>303</td><td>考克大学</td><td>35</td><td> Ireland</td></tr>
+<tr><td>304</td><td>澳门大学</td><td>34.9</td><td> Macau SAR</td></tr>
+<tr><td>305</td><td>萨里大学</td><td>34.7</td><td> United Kingdom</td></tr>
+<tr><td>306</td><td>华中科技大学</td><td>34.6</td><td> China (Mainland)</td></tr>
+<tr><td>307</td><td>天津大学</td><td>34.4</td><td> China (Mainland)</td></tr>
+<tr><td>308</td><td>戴尔豪斯大学</td><td>34.3</td><td> Canada</td></tr>
+<tr><td>308</td><td>俄罗斯国家研究型高等经济大学（HSE）</td><td>34.3</td><td> Russia</td></tr>
+<tr><td>308</td><td>国立核研究院“MEPhI”</td><td>34.3</td><td> Russia</td></tr>
+<tr><td>308</td><td>因斯布鲁克大学</td><td>34.3</td><td> Austria</td></tr>
+<tr><td>312</td><td>北卡罗来纳州立大学</td><td>34.1</td><td> United States</td></tr>
+<tr><td>312</td><td>塔夫茨大学</td><td>34.1</td><td> United States</td></tr>
+<tr><td>312</td><td>筑波大学</td><td>34.1</td><td> Japan</td></tr>
+<tr><td>316</td><td>乐卓博大学</td><td>33.9</td><td> Australia</td></tr>
+<tr><td>317</td><td>科罗拉多大学博尔德分校</td><td>33.8</td><td> United States</td></tr>
+<tr><td>317</td><td>伊利诺伊大学芝加哥分校</td><td>33.8</td><td> United States</td></tr>
+<tr><td>317</td><td>格勒诺布尔阿尔卑斯大学（UGA）</td><td>33.8</td><td> France</td></tr>
+<tr><td>320</td><td>林雪平大学</td><td>33.7</td><td> Sweden</td></tr>
+<tr><td>320</td><td>马德里大学卡洛斯三世大学</td><td>33.7</td><td> Spain</td></tr>
+<tr><td>322</td><td>喀山联邦大学</td><td>33.4</td><td> Russia</td></tr>
+<tr><td>323</td><td>阿根廷天主教大学（UCA）</td><td>33.3</td><td> Argentina</td></tr>
+<tr><td>324</td><td>米兰大学</td><td>33.2</td><td> Italy</td></tr>
+<tr><td>325</td><td>都灵理工大学</td><td>33.1</td><td> Italy</td></tr>
+<tr><td>325</td><td>斯特拉斯克莱德大学</td><td>33.1</td><td> United Kingdom</td></tr>
+<tr><td>327</td><td>台湾科技大学</td><td>33</td><td> Taiwan</td></tr>
+<tr><td>328</td><td>法兰克福大学</td><td>32.9</td><td> Germany</td></tr>
+<tr><td>328</td><td>西蒙弗雷泽大学</td><td>32.9</td><td> Canada</td></tr>
+<tr><td>330</td><td>奥尔堡大学</td><td>32.5</td><td> Denmark</td></tr>
+<tr><td>331</td><td>怀卡托大学</td><td>32.3</td><td> New Zealand</td></tr>
+<tr><td>332</td><td>台湾师范大学</td><td>32.2</td><td> Taiwan</td></tr>
+<tr><td>333</td><td>里约热内卢联邦大学</td><td>32.1</td><td> Brazil</td></tr>
+<tr><td>334</td><td>国立科技大学（NUST）伊斯兰堡</td><td>32</td><td> Pakistan</td></tr>
+<tr><td>335</td><td>科隆大学</td><td>31.9</td><td> Germany</td></tr>
+<tr><td>335</td><td>里斯本大学</td><td>31.9</td><td> Portugal</td></tr>
+<tr><td>335</td><td>乌拉尔联邦大学</td><td>31.9</td><td> Russia</td></tr>
+<tr><td>338</td><td>广岛大学</td><td>31.8</td><td> Japan</td></tr>
+<tr><td>339</td><td>印第安纳大学伯明顿分校</td><td>31.7</td><td> United States</td></tr>
+<tr><td>340</td><td>埃尔朗根-纽伦堡大学</td><td>31.6</td><td> Germany</td></tr>
+<tr><td>340</td><td>文莱理工大学</td><td>31.6</td><td> Brunei</td></tr>
+<tr><td>342</td><td>东英吉利大学（UEA）</td><td>31.5</td><td> United Kingdom</td></tr>
+<tr><td>343</td><td>伦敦的伯克贝克学院，大学</td><td>31.4</td><td> United Kingdom</td></tr>
+<tr><td>343</td><td>加泰罗尼亚理工大学</td><td>31.4</td><td> Spain</td></tr>
+<tr><td>345</td><td>莫斯科国际关系研究所</td><td>31.3</td><td> Russia</td></tr>
+<tr><td>346</td><td>梨花女子大学</td><td>31.2</td><td> South Korea</td></tr>
+<tr><td>347</td><td>IE大学</td><td>31.1</td><td> Spain</td></tr>
+<tr><td>347</td><td>于韦斯屈莱大学</td><td>31.1</td><td> Finland</td></tr>
+<tr><td>347</td><td>丹麦南部大学</td><td>31.1</td><td> Denmark</td></tr>
+<tr><td>350</td><td>林茨大学</td><td>31</td><td> Austria</td></tr>
+<tr><td>350</td><td>康涅狄格大学</td><td>31</td><td> United States</td></tr>
+<tr><td>352</td><td>挪威科技大学</td><td>30.9</td><td> Norway</td></tr>
+<tr><td>352</td><td>耶拿大学</td><td>30.9</td><td> Germany</td></tr>
+<tr><td>354</td><td>邓迪大学</td><td>30.8</td><td> United Kingdom</td></tr>
+<tr><td>355</td><td>北京理工大学</td><td>30.7</td><td> China (Mainland)</td></tr>
+<tr><td>355</td><td>伦敦大学城市学院</td><td>30.7</td><td> United Kingdom</td></tr>
+<tr><td>355</td><td>斯图加特大学</td><td>30.7</td><td> Germany</td></tr>
+<tr><td>358</td><td>布拉格化学技术研究所</td><td>30.6</td><td> Czech Republic</td></tr>
+<tr><td>359</td><td>ITMO大学</td><td>30.5</td><td> Russia</td></tr>
+<tr><td>359</td><td>维多利亚大学</td><td>30.5</td><td> Canada</td></tr>
+<tr><td>361</td><td>国油大学（Petronas）</td><td>30.4</td><td> Malaysia</td></tr>
+<tr><td>362</td><td>乔治华盛顿大学</td><td>30.3</td><td> United States</td></tr>
+<tr><td>363</td><td>神户大学</td><td>30.2</td><td> Japan</td></tr>
+<tr><td>363</td><td>秘鲁天主大学</td><td>30.2</td><td> Peru</td></tr>
+<tr><td>363</td><td>奎德阿萨姆大学</td><td>30.2</td><td> Pakistan</td></tr>
+<tr><td>363</td><td>南澳大学（UniSA）</td><td>30.2</td><td> Australia</td></tr>
+<tr><td>363</td><td>弗吉尼亚理工学院（Virginia Tech）</td><td>30.2</td><td> United States</td></tr>
+<tr><td>368</td><td>林肯大学</td><td>30.1</td><td> New Zealand</td></tr>
+<tr><td>369</td><td>艾尔朗加大学</td><td>29.9</td><td> Indonesia</td></tr>
+<tr><td>369</td><td>美国沙迦大学</td><td>29.9</td><td> United Arab Emirates</td></tr>
+<tr><td>369</td><td>印度理工学院鲁尔基分校</td><td>29.9</td><td> India</td></tr>
+<tr><td>369</td><td>乌梅大学</td><td>29.9</td><td> Sweden</td></tr>
+<tr><td>369</td><td>新里斯本大学</td><td>29.9</td><td> Portugal</td></tr>
+<tr><td>369</td><td>堪萨斯大学</td><td>29.9</td><td> United States</td></tr>
+<tr><td>375</td><td>乌尔姆大学</td><td>29.8</td><td> Germany</td></tr>
+<tr><td>375</td><td>加州大学圣克鲁兹分校</td><td>29.8</td><td> United States</td></tr>
+<tr><td>375</td><td>肯特大学</td><td>29.8</td><td> United Kingdom</td></tr>
+<tr><td>378</td><td>捷克技术大学在布拉格</td><td>29.7</td><td> Czech Republic</td></tr>
+<tr><td>378</td><td>南开大学</td><td>29.7</td><td> China (Mainland)</td></tr>
+<tr><td>380</td><td>谢里夫理工大学</td><td>29.6</td><td> Iran, Islamic Republic of</td></tr>
+<tr><td>380</td><td>夏威夷大学马诺亚分校</td><td>29.6</td><td> United States</td></tr>
+<tr><td>382</td><td>圣彼得堡国立政治大学</td><td>29.5</td><td> Russia</td></tr>
+<tr><td>382</td><td>哈韦里亚纳主教大学</td><td>29.5</td><td> Colombia</td></tr>
+<tr><td>384</td><td>印度理工学院古瓦哈提分校</td><td>29.3</td><td> India</td></tr>
+<tr><td>384</td><td>苏丹卡布斯大学</td><td>29.3</td><td> Oman</td></tr>
+<tr><td>384</td><td>台北医科大学</td><td>29.3</td><td> Taiwan</td></tr>
+<tr><td>384</td><td>威廉姆斯大学明斯特</td><td>29.3</td><td> Germany</td></tr>
+<tr><td>388</td><td>拉彭兰塔理工大学</td><td>29.2</td><td> Finland</td></tr>
+<tr><td>388</td><td>东北大学</td><td>29.2</td><td> United States</td></tr>
+<tr><td>390</td><td>巴基斯坦工程与应用科学研究所（PIEAS）</td><td>29.1</td><td> Pakistan</td></tr>
+<tr><td>390</td><td>巴勒莫大学</td><td>29.1</td><td> Argentina</td></tr>
+<tr><td>392</td><td>中央大学</td><td>29</td><td> South Korea</td></tr>
+<tr><td>392</td><td>东京医科齿科大学</td><td>29</td><td> Japan</td></tr>
+<tr><td>392</td><td>奥卢大学</td><td>29</td><td> Finland</td></tr>
+<tr><td>392</td><td>犹他大学</td><td>29</td><td> United States</td></tr>
+<tr><td>396</td><td>印度理工学院印多尔校区</td><td>28.7</td><td> India</td></tr>
+<tr><td>396</td><td>山东大学</td><td>28.7</td><td> China (Mainland)</td></tr>
+<tr><td>398</td><td>托木斯克理工大学</td><td>28.6</td><td> Russia</td></tr>
+<tr><td>398</td><td>蒂尔堡大学</td><td>28.6</td><td> Netherlands</td></tr>
+<tr><td>400</td><td>瓦伦西亚政治大学</td><td>28.4</td><td> Spain</td></tr>
+<tr><td>400</td><td>维尔纽斯大学</td><td>28.4</td><td> Lithuania</td></tr>
+<tr><td>402</td><td>墨西哥学院</td><td>28.3</td><td> Mexico</td></tr>
+<tr><td>402</td><td>伦敦皇家霍洛威大学</td><td>28.3</td><td> United Kingdom</td></tr>
+<tr><td>404</td><td>比萨大学</td><td>28.2</td><td> Italy</td></tr>
+<tr><td>405</td><td>哈萨克斯坦国家技术大学</td><td>28.1</td><td> Kazakhstan</td></tr>
+<tr><td>406</td><td>四川大学</td><td>28</td><td> China (Mainland)</td></tr>
+<tr><td>406</td><td>华南理工大学</td><td>28</td><td> China (Mainland)</td></tr>
+<tr><td>408</td><td>科罗拉多州立大学</td><td>27.9</td><td> United States</td></tr>
+<tr><td>408</td><td>以色列理工学院</td><td>27.9</td><td> Israel</td></tr>
+<tr><td>410</td><td>韩国外国语大学</td><td>27.8</td><td> South Korea</td></tr>
+<tr><td>410</td><td>维多利亚州立大学</td><td>27.8</td><td> Germany</td></tr>
+<tr><td>412</td><td>布鲁内尔大学</td><td>27.7</td><td> United Kingdom</td></tr>
+<tr><td>412</td><td>约翰内斯堡大学</td><td>27.7</td><td> South Africa</td></tr>
+<tr><td>412</td><td>菲律宾大学</td><td>27.7</td><td> Philippines</td></tr>
+<tr><td>415</td><td>坦佩雷大学</td><td>27.6</td><td> Finland</td></tr>
+<tr><td>416</td><td>鲁尔大学波鸿</td><td>27.5</td><td> Germany</td></tr>
+<tr><td>416</td><td>石溪大学</td><td>27.5</td><td> United States</td></tr>
+<tr><td>416</td><td>开罗美国大学</td><td>27.5</td><td> Egypt</td></tr>
+<tr><td>416</td><td>那不勒斯腓特烈二世大学</td><td>27.5</td><td> Italy</td></tr>
+<tr><td>420</td><td>美因茨大学</td><td>27.4</td><td> Germany</td></tr>
+<tr><td>420</td><td>莱比锡大学</td><td>27.4</td><td> Germany</td></tr>
+<tr><td>422</td><td>雅典国立科技大学</td><td>27.3</td><td> Greece</td></tr>
+<tr><td>422</td><td>上海大学</td><td>27.3</td><td> China (Mainland)</td></tr>
+<tr><td>422</td><td>厦门大学</td><td>27.3</td><td> China (Mainland)</td></tr>
+<tr><td>425</td><td>佛林德斯大学</td><td>27.2</td><td> Australia</td></tr>
+<tr><td>425</td><td>斯旺西大学</td><td>27.2</td><td> United Kingdom</td></tr>
+<tr><td>425</td><td>纽约州立大学布法罗分校</td><td>27.2</td><td> United States</td></tr>
+<tr><td>428</td><td>国立中山大学</td><td>27.1</td><td> Taiwan</td></tr>
+<tr><td>428</td><td>科罗拉多大学丹佛分校</td><td>27.1</td><td> United States</td></tr>
+<tr><td>428</td><td>北京科技大学</td><td>27.1</td><td> China (Mainland)</td></tr>
+<tr><td>428</td><td>威特沃特斯兰德大学</td><td>27.1</td><td> South Africa</td></tr>
+<tr><td>432</td><td>奥斯特拉尔大学</td><td>27</td><td> Argentina</td></tr>
+<tr><td>433</td><td>拉瓦尔大学</td><td>26.9</td><td> Canada</td></tr>
+<tr><td>434</td><td>远东联邦大学</td><td>26.8</td><td> Russia</td></tr>
+<tr><td>434</td><td>斯特拉斯堡大学</td><td>26.8</td><td> France</td></tr>
+<tr><td>436</td><td>国立台北理工大学</td><td>26.6</td><td> Taiwan</td></tr>
+<tr><td>436</td><td>维多利亚大学圣拉斐尔大学</td><td>26.6</td><td> Italy</td></tr>
+<tr><td>438</td><td>牛津布鲁克斯大学</td><td>26.5</td><td> United Kingdom</td></tr>
+<tr><td>438</td><td>科英布拉大学</td><td>26.5</td><td> Portugal</td></tr>
+<tr><td>438</td><td>维克森林大学</td><td>26.5</td><td> United States</td></tr>
+<tr><td>441</td><td>圣保罗联邦大学（UNIFESP）</td><td>26.4</td><td> Brazil</td></tr>
+<tr><td>441</td><td>萨尔大学</td><td>26.4</td><td> Germany</td></tr>
+<tr><td>443</td><td>阿米尔卡比尔技术大学</td><td>26.3</td><td> Iran, Islamic Republic of</td></tr>
+<tr><td>443</td><td>南哈萨克斯坦国立大学（SKSU）</td><td>26.3</td><td> Kazakhstan</td></tr>
+<tr><td>443</td><td>北京航空航天大学</td><td>26.3</td><td> China (Mainland)</td></tr>
+<tr><td>443</td><td>伊利诺伊理工学院</td><td>26.3</td><td> United States</td></tr>
+<tr><td>443</td><td>SOAS伦敦大学东方与非洲研究学院</td><td>26.3</td><td> United Kingdom</td></tr>
+<tr><td>443</td><td>华盛顿州立大学</td><td>26.3</td><td> United States</td></tr>
+<tr><td>449</td><td>茂物农业大学</td><td>26.2</td><td> Indonesia</td></tr>
+<tr><td>449</td><td>哈瑟尔特大学</td><td>26.2</td><td> Belgium</td></tr>
+<tr><td>449</td><td>乌尔库拉大学（UQU）</td><td>26.2</td><td> Saudi Arabia</td></tr>
+<tr><td>449</td><td>蒙得维的亚大学</td><td>26.2</td><td> Uruguay</td></tr>
+<tr><td>453</td><td>加州大学河滨分校</td><td>26.1</td><td> United States</td></tr>
+<tr><td>454</td><td>斯泰伦博斯大学</td><td>26</td><td> South Africa</td></tr>
+<tr><td>454</td><td>特罗姆瑟大学</td><td>26</td><td> Norway</td></tr>
+<tr><td>456</td><td>约克大学</td><td>25.9</td><td> Canada</td></tr>
+<tr><td>457</td><td>国立科学院院校里昂（INSA）</td><td>25.7</td><td> France</td></tr>
+<tr><td>457</td><td>西江大学</td><td>25.7</td><td> South Korea</td></tr>
+<tr><td>457</td><td>特伦托大学</td><td>25.7</td><td> Italy</td></tr>
+<tr><td>460</td><td>佛罗伦萨大学</td><td>25.6</td><td> Italy</td></tr>
+<tr><td>461</td><td>詹姆斯库克大学（JCU）</td><td>25.5</td><td> Australia</td></tr>
+<tr><td>461</td><td>伦斯勒理工学院</td><td>25.5</td><td> United States</td></tr>
+<tr><td>461</td><td>东南大学</td><td>25.5</td><td> China (Mainland)</td></tr>
+<tr><td>461</td><td>贝尔格拉诺大学</td><td>25.5</td><td> Argentina</td></tr>
+<tr><td>465</td><td>埃克塞斯大学</td><td>25.4</td><td> United Kingdom</td></tr>
+<tr><td>465</td><td>智利圣地亚哥大学</td><td>25.4</td><td> Chile</td></tr>
+<tr><td>467</td><td>国立科技大学“MISIS”</td><td>25.3</td><td> Russia</td></tr>
+<tr><td>467</td><td>哈瓦那大学</td><td>25.3</td><td> Cuba</td></tr>
+<tr><td>467</td><td>阿拉斯加大学费尔班克斯分校</td><td>25.3</td><td> United States</td></tr>
+<tr><td>467</td><td>University of Iowa</td><td>25.3</td><td> United States</td></tr>
+<tr><td>471</td><td>都柏林城市大学</td><td>25.2</td><td> Ireland</td></tr>
+<tr><td>471</td><td>杜兰大学</td><td>25.2</td><td> United States</td></tr>
+<tr><td>473</td><td>塞浦路斯大学</td><td>25.1</td><td> Cyprus</td></tr>
+<tr><td>473</td><td>萨斯喀彻温大学</td><td>25.1</td><td> Canada</td></tr>
+<tr><td>475</td><td>长庚大学</td><td>25</td><td> Taiwan</td></tr>
+<tr><td>475</td><td>都灵大学（UNITO）</td><td>25</td><td> Italy</td></tr>
+<tr><td>477</td><td>达曼大学</td><td>24.9</td><td> Saudi Arabia</td></tr>
+<tr><td>477</td><td>科什大学</td><td>24.9</td><td> Turkey</td></tr>
+<tr><td>477</td><td>哈勒-维滕贝格大学</td><td>24.9</td><td> Germany</td></tr>
+<tr><td>477</td><td>圣保罗州立大学</td><td>24.9</td><td> Brazil</td></tr>
+<tr><td>481</td><td>邦德大学</td><td>24.8</td><td> Australia</td></tr>
+<tr><td>481</td><td>东国大学</td><td>24.8</td><td> South Korea</td></tr>
+<tr><td>481</td><td>爱荷华州立大学</td><td>24.8</td><td> United States</td></tr>
+<tr><td>481</td><td>哈萨克斯坦国家农业大学</td><td>24.8</td><td> Kazakhstan</td></tr>
+<tr><td>481</td><td>马来西亚北方大学</td><td>24.8</td><td> Malaysia</td></tr>
+<tr><td>486</td><td>奥克兰理工大学</td><td>24.7</td><td> New Zealand</td></tr>
+<tr><td>486</td><td>阿尔卑斯 - 亚德里亚安大学克拉根福</td><td>24.7</td><td> Austria</td></tr>
+<tr><td>488</td><td>亚洲大学</td><td>24.6</td><td> South Korea</td></tr>
+<tr><td>488</td><td>马德里理工大学</td><td>24.6</td><td> Spain</td></tr>
+<tr><td>490</td><td>马赛大学</td><td>24.5</td><td> France</td></tr>
+<tr><td>490</td><td>本·古里安大学</td><td>24.5</td><td> Israel</td></tr>
+<tr><td>490</td><td>千叶大学</td><td>24.5</td><td> Japan</td></tr>
+<tr><td>490</td><td>吉森大学</td><td>24.5</td><td> Germany</td></tr>
+<tr><td>494</td><td>韩国加图立大学</td><td>24.4</td><td> South Korea</td></tr>
+<tr><td>494</td><td>乌拉圭大学</td><td>24.4</td><td> Uruguay</td></tr>
+<tr><td>494</td><td>格拉纳达大学</td><td>24.4</td><td> Spain</td></tr>
+<tr><td>497</td><td>布兰迪斯大学</td><td>24.3</td><td> United States</td></tr>
+<tr><td>497</td><td>吉林大学</td><td>24.3</td><td> China (Mainland)</td></tr>
+<tr><td>499</td><td>中南大学</td><td>24.2</td><td> China (Mainland)</td></tr>
+<tr><td>499</td><td>罗马第二大学</td><td>24.2</td><td> Italy</td></tr>
+          </table>
+      </div>
+    </section><!-- End Counts Section -->
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>朱和乐</span></strong>. All Rights Reserved
+      </div>
+    
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="../static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="../static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="../static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/assets/js/main.js"></script>
+
+</body>
+
+</html>
